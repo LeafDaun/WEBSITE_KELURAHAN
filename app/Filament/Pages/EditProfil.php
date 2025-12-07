@@ -95,6 +95,12 @@ class EditProfil extends Page
                             ->directory('profil')
                             ->label('Gambar Struktur Organisasi')
                             ->nullable(),
+
+                             FileUpload::make('logo')
+                            ->disk('public')
+                            ->directory('profil')
+                            ->label('Gambar Logo (format png)')
+                            ->nullable(),
                     ]),
                 ]),
 

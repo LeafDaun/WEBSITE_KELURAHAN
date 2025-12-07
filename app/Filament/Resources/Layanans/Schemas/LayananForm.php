@@ -6,6 +6,7 @@ use Filament\Schemas\Schema;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\MarkdownEditor;
 
 class LayananForm
 {
@@ -15,12 +16,16 @@ class LayananForm
             ->components([
                 TextInput::make('judul')
                     ->default(null),
-                Textarea::make('deskripsi')
-                    ->default(null)
+                Textarea::make('deskripsi')           
+                    ->label('Deskripsi'),
+
+                MarkdownEditor::make('deskripsi_lengkap')           
+                    ->label('Daftar Deskripsi Layanan (gunakan tag HTML jika memungkinkan)')
+                    ->columnSpanFull(),  
+                MarkdownEditor::make('persyaratan')           
+                    ->label('Persyaratan (gunakan tag HTML jika memungkinkan)')
                     ->columnSpanFull(),
-                Textarea::make('persyaratan')
-                    ->default(null)
-                    ->columnSpanFull(),
+               
                 FileUpload::make('gambar')
                             ->disk('public')
                             ->directory('layanan')

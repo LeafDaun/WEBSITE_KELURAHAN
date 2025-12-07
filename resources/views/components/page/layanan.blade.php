@@ -8,11 +8,41 @@
                     <div class="sub-style">
                         <h4 class="sub-title px-3 mb-0">Layanan</h4>
                     </div>
-                    <h1 class="display-8 mb-4">Kelurahan Girian</h1>
+                    <h1 class="display-8 mb-4">{{ $data->judul }}</h1>
                 </div>
+
+    <div class="row">
+        <div class="col-6">
+
+            <div class="card">
+                <h5 class="card-header bg-primary text-white">DAFTAR LAYANAN :</h5>
+                <div class="card-body">
+                    {!! $data->deskripsi_lengkap !!}
+                </div>
+            </div>
+
+        </div>
+
+          <div class="col-6">
+
+            <div class="card">
+                <h5 class="card-header bg-success text-white">PERSYARATAN :</h5>
+                <div class="card-body">
+                    {!! $data->persyaratan !!}
+                </div>
+            </div>
+
+        </div>
+    </div>
+          
+  
 
        </div>
        
+
+
     </div>
+
+    
 
 </x-layouts.app>

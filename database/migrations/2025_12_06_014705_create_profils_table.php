@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('jumlah_penduduk')->nullable();
             $table->string('luas_wilayah')->nullable();
             $table->string('jumlah_umkm')->nullable();
+            $table->string('logo')->nullable();
             $table->timestamps();
         });
     }

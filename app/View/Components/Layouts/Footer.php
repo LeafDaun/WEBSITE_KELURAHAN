@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Layouts;
 
+use App\Models\Profil;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -21,6 +22,7 @@ class Footer extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.layouts.footer');
+        $profil = Profil::findOrFail(1);
+        return view('components.layouts.footer', compact('profil'));
     }
 }

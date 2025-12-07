@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Berita;
 use App\Models\Layanan;
+use App\Models\Potensi;
 use App\Models\User;
 use App\Models\Profil;
 use App\Models\Slide;
@@ -76,7 +77,7 @@ Hal ini membuat masyarakat di Girian Bawah — seperti warga Girian umumnya — 
             'jumlah_penduduk' => '1.450 Jiwa',
             'luas_wilayah' => '530 Ha',
             'jumlah_umkm' => '8 UMKM',
-            
+            'logo' => 'profil/logo.png',
 
         ]);
 
@@ -84,27 +85,45 @@ Hal ini membuat masyarakat di Girian Bawah — seperti warga Girian umumnya — 
         Layanan::create([
             'judul' => 'Administrasi',
             'deskripsi' => 'Adalah layanan administrasi pengurusan Surat Keterangan Domisili dan Keterangan lainnya',
-            'persyaratan' => '<li>Membawa KTP Asli dan Fotokopi</li>
-                                <li>Mengisi Formulir Permohonan</li>
-                                <li>Proses Minimal Tiga (3) Hari Kerja</li>',
+
+            'deskripsi_lengkap' => ' <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Surat Keterangan Domisili</p>
+            <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Surat Keterangan Tidak Mampu</p>
+            <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Surat Pengantar Nikah</p>',
+
+            'persyaratan' => '<ol><li>Membawa KTP Asli dan Fotokopi</li>
+            <li>Mengisi Formulir Permohonan</li>
+            <li>Proses Minimal Tiga (3) Hari Kerja</li></ol>',
+
             'gambar' => 'layanan/gambar_administrasi.jpg',
         ]);
 
          Layanan::create([
             'judul' => 'Kesehatan',
             'deskripsi' => 'Adalah layanan kesehatan yang diberikan oleh pemerintah seperti Posyandu dan Lainnya',
-            'persyaratan' => '<li>Membawa KTP Asli dan Fotokopi</li>
-                                <li>Mengisi Formulir Permohonan</li>
-                                <li>Proses Minimal Tiga (3) Hari Kerja</li>',
+
+             'deskripsi_lengkap' => ' <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Posyandu Balita</p>
+             <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Pemeriksaan Lansia</p>
+             <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Imunisasi Gratis</p>',
+            
+            'persyaratan' => '<ol><li>Membawa KTP Asli dan Fotokopi</li>
+            <li>Mengisi Formulir Permohonan</li>
+            <li>Proses Minimal Tiga (3) Hari Kerja</li></ol>',
+
             'gambar' => 'layanan/gambar_kesehatan.jpg',
         ]);
 
             Layanan::create([
             'judul' => 'Bantuan Sosial',
             'deskripsi' => 'Adalah layanan bantuan Sosial pemerintah seperti BLT dan Lainnya',
-            'persyaratan' => '<li>Membawa KTP Asli dan Fotokopi</li>
-                                <li>Mengisi Formulir Permohonan</li>
-                                <li>Proses Minimal Tiga (3) Hari Kerja</li>',
+
+             'deskripsi_lengkap' => ' <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>PKH (Program Keluarga Harapan)</p>
+             <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>BLT (Bantuan Langsung Tunai)</p>
+             <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Bantuan UMKM</p>',
+
+            'persyaratan' => '<ol><li>Membawa KTP Asli dan Fotokopi</li>
+            <li>Mengisi Formulir Permohonan</li>
+            <li>Proses Minimal Tiga (3) Hari Kerja</li></ol>',
+
             'gambar' => 'layanan/gambar_sosial.jpg',
         ]);
 
@@ -149,6 +168,45 @@ Hal ini membuat masyarakat di Girian Bawah — seperti warga Girian umumnya — 
             Dalam Ibadah tersebut Wakil Wali Kota Bitung Randito Maringka, Ketua TP-PKK Ny. Ellen Honandar-Sondak, SE, Sektretaris TP-PKK Ny. Jacinta Marybell Meringka, Sekertaris Daerah Ir. Ign. Rudy Theno, ST, MT , Ketua DWP Kota Bitung Ny. Nurjaya Theno Munarwin, SE serta seluruh Perangkat daerah di pemerintah Kota Bitung terlihat begitu menghayati.',
 
             'gambar' => 'berita/berita_3.jpg'
+        ]);
+
+        Potensi::create([
+            'judul' => 'Wisata Alam',
+            'deskripsi' => 'Potensi Wisata Alam yang terdapat di Kelurahan Girian Bawah',
+            'deskripsi_lengkap' => 'Kota Bitung dikenal sebagai salah satu daerah pesisir yang memiliki perkembangan pariwisata sangat pesat di Sulawesi Utara. Selain populer dengan aksesnya menuju Taman Nasional Bunaken dan Taman Wisata Alam Batu Angus, Bitung juga menawarkan pengalaman wisata budaya, kuliner, dan maritim yang kuat. Keberagaman masyarakatnya, perpaduan antara kultur lokal dan pengaruh luar, menjadikan kota ini kaya akan tradisi serta khasanah sosial yang menarik bagi wisatawan. Dengan dukungan infrastruktur pelabuhan internasional serta berbagai event tahunan seperti Festival Pesona Selat Lembeh, Bitung terus memantapkan diri sebagai destinasi unggulan di kawasan timur Indonesia.
+
+Di dalam konteks tersebut, Kelurahan Girian Bawah menjadi salah satu wilayah yang memiliki potensi strategis untuk dikembangkan. Letaknya yang dekat dengan pusat kota dan akses transportasi yang mudah membuat Girian Bawah menjadi pintu masuk yang nyaman bagi wisatawan yang ingin menjelajahi berbagai destinasi sekitarnya. Meskipun bukan kawasan wisata pesisir langsung, kelurahan ini tetap memiliki daya tarik tersendiri melalui atmosfer pemukiman yang tertata, aktivitas sosial masyarakat yang dinamis, serta pusat-pusat kegiatan yang mendukung pergerakan wisatawan menuju berbagai objek wisata di Bitung.
+
+Selain sebagai wilayah transit dan pusat aktivitas masyarakat, Girian Bawah juga memiliki potensi wisata budaya dan kuliner yang dapat menjadi unggulan. Keberagaman masyarakat yang menghuni wilayah ini menciptakan kekayaan tradisi, baik dalam bentuk kuliner lokal, kegiatan keagamaan, maupun interaksi sosial yang rukun dan harmonis. Usaha kuliner, pasar lokal, serta ruang-ruang publik yang ramai menjadi daya tarik tersendiri bagi wisatawan yang ingin merasakan suasana lokal Bitung secara lebih dekat. Potensi ini bisa dikembangkan lebih jauh melalui penataan kawasan, promosi UMKM, serta penyelenggaraan event lokal yang menarik.
+
+Dengan melihat potensi tersebut, Girian Bawah memiliki peluang besar untuk menjadi bagian penting dalam rantai destinasi pariwisata Kota Bitung. Pendekatan pengembangan wisata berbasis masyarakat, penguatan identitas lokal, serta dukungan infrastruktur dapat menjadi strategi utama dalam memaksimalkan daya tariknya. Jika dikelola dengan baik, Girian Bawah tidak hanya menjadi kawasan pendukung, tetapi juga mampu tampil sebagai salah satu ikon wisata budaya dan kuliner yang memperkaya pengalaman wisatawan selama berada di Kota Bitung.',
+            'gambar' => 'potensi/potensi_wisata.jpg'
+        ]);
+
+         Potensi::create([
+            'judul' => 'UMKM',
+            'deskripsi' => 'Usaha Mikro Kecil Menengah yang ada di Kelurahan Girian Bawah',
+            'deskripsi_lengkap' => 'Kota Bitung dikenal sebagai salah satu pusat pertumbuhan ekonomi di Sulawesi Utara, dan sektor UMKM menjadi tulang punggung penting dalam perkembangan tersebut. Dengan karakter kota pelabuhan yang dinamis, Bitung memiliki ekosistem usaha yang terus bergerak, mulai dari industri pengolahan hasil laut, kerajinan lokal, hingga kuliner khas. Keberagaman sumber daya alam dan manusia telah menciptakan peluang luas bagi UMKM untuk berkembang, sekaligus memberikan kontribusi nyata terhadap lapangan kerja dan peningkatan kesejahteraan masyarakat.
+
+Di antara wilayah yang memiliki potensi UMKM cukup kuat, Kelurahan Girian Bawah menempati posisi yang strategis. Letaknya yang berdekatan dengan pusat perdagangan dan jalur transportasi utama membuat kelurahan ini menjadi tempat ideal bagi tumbuhnya berbagai bentuk usaha kecil dan menengah. Aktivitas ekonomi yang hidup—mulai dari warung, toko sembako, produsen makanan rumahan, hingga jasa perbengkelan—menunjukkan bahwa Girian Bawah memiliki struktur ekonomi masyarakat yang solid dan responsif terhadap kebutuhan pasar.
+
+Selain itu, Girian Bawah memiliki keunggulan berupa keragaman produk UMKM yang terus bertambah dari waktu ke waktu. Produk makanan olahan, terutama yang berbasis hasil laut, menjadi salah satu potensi unggulan karena Bitung dikenal sebagai daerah yang kaya akan ikan dan produk perikanan. Di sisi lain, sektor jasa dan perdagangan juga berkembang pesat, ditopang oleh permintaan masyarakat yang tinggi dan mobilitas penduduk yang aktif. Ini memberikan peluang besar bagi UMKM untuk memperluas pasar, memperkuat branding lokal, dan meningkatkan kualitas produksi.
+
+Dengan segala potensi yang ada, pengembangan UMKM di Girian Bawah memiliki masa depan yang cerah apabila terus ditunjang oleh pelatihan, pendampingan, serta akses permodalan yang memadai. Dukungan pemerintah daerah, kolaborasi antar–pelaku usaha, serta pemanfaatan teknologi digital dapat menjadi kunci untuk meningkatkan daya saing produk lokal. Jika dikelola dengan baik, Girian Bawah tidak hanya akan menjadi kawasan ekonomi yang maju, tetapi juga mampu mencetak pelaku UMKM unggulan yang dapat bersaing di tingkat kota, provinsi, bahkan nasional.',
+            'gambar' => 'potensi/potensi_umkm.jpg'
+        ]);
+
+         Potensi::create([
+            'judul' => 'Pertanian',
+            'deskripsi' => 'Hasil produk Pertanian dan turunnanya yang ada di kelurahan Girian Bawah ',
+            'deskripsi_lengkap' => 'Kota Bitung memang lebih dikenal sebagai kota industri dan pelabuhan, namun sektor pertanian tetap memiliki peran penting dalam menopang kehidupan masyarakat. Keberadaan lahan-lahan pertanian di beberapa wilayah kota memberikan kontribusi terhadap ketersediaan bahan pangan lokal serta mendukung ketahanan pangan daerah. Meskipun luas lahan pertanian tidak sebesar daerah pedesaan, Bitung tetap memiliki potensi untuk mengembangkan pertanian perkotaan (urban farming), tanaman hortikultura, dan beberapa komoditas yang sesuai dengan kondisi iklim tropis di kawasan pesisir.
+
+Dalam konteks wilayah tersebut, Kelurahan Girian Bawah memiliki potensi pertanian yang dapat terus dikembangkan terutama dalam skala rumah tangga dan komunitas. Kondisi geografis yang relatif datar serta lingkungan permukiman yang tertata memberi peluang bagi masyarakat untuk memanfaatkan pekarangan sebagai lahan produktif. Aktivitas seperti budidaya sayuran cepat panen, tanaman herbal, cabai, tomat, hingga tanaman hias dapat menjadi solusi praktis untuk memenuhi kebutuhan rumah tangga sekaligus membuka peluang ekonomi kecil melalui penjualan hasil panen.
+
+Selain budidaya pekarangan, Girian Bawah juga memiliki potensi kuat untuk pengembangan pertanian modern berbasis teknologi sederhana. Penggunaan metode hidroponik, vertikultur, dan polybag semakin diminati masyarakat perkotaan karena efisiensinya dalam penggunaan lahan yang terbatas. Potensi ini dapat diperkuat melalui pembentukan kelompok tani kota, pelatihan pertanian organik, serta pemanfaatan ruang publik sebagai lokasi kebun komunitas. Inisiatif seperti ini tidak hanya meningkatkan nilai ekonomi, tetapi juga menciptakan lingkungan yang lebih hijau dan sehat.
+
+Apabila potensi tersebut dikelola secara berkelanjutan, sektor pertanian di Girian Bawah dapat berkembang menjadi sumber penghidupan tambahan bagi masyarakat sekaligus menjadi bagian dari strategi ketahanan pangan lokal Kota Bitung. Dukungan pemerintah kelurahan, kolaborasi antarwarga, serta pemanfaatan teknologi digital untuk pemasaran hasil tani dapat semakin memperkuat posisi Girian Bawah sebagai salah satu contoh pengembangan pertanian perkotaan yang berhasil. Dengan pendekatan yang tepat, sektor pertanian di wilayah ini mampu memberikan manfaat ekonomi, sosial, dan lingkungan bagi seluruh masyarakat.',
+            'gambar' => 'potensi/potensi_pertanian.jpg'
         ]);
 
 

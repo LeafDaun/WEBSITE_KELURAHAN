@@ -21,7 +21,7 @@
                                 <div class="service-content-inner">
                                     <h5 class="mb-4">{{ $data->judul }}</h5>
                                     <p class="mb-4">{{ $data->deskripsi }}</p>
-                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Selengkapnya</a>
+                                    <a href="{{ route('layanan.show', $data->id) }}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Selengkapnya</a>
                                 </div>
                             </div>
                         </div>

@@ -15,48 +15,22 @@
 
                 
                 <div class="row g-4 justify-content-center">
+                    @foreach($potensi as $data)
                     <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="service-item rounded">
                            <div class="service-img rounded-top">
-                                <img src="{{ asset('terapia/img/service-1.jpg') }}" class="img-fluid rounded-top w-100" alt="">
+                                <img src="{{ asset('storage/' .$data->gambar) }}" class="img-fluid rounded-top w-100" alt="">
                            </div>
                             <div class="service-content rounded-bottom bg-light p-4">
                                 <div class="service-content-inner">
-                                    <h5 class="mb-4">Message Therapy</h5>
-                                    <p class="mb-4">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus, dolor qui ullam</p>
-                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
+                                    <h5 class="mb-4">{{ $data->judul }}</h5>
+                                    <p class="mb-4">{{ $data->deskripsi }}</p>
+                                    <a href="{{ route('potensi.show', $data->id) }}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Selengkapnya</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="service-item rounded">
-                           <div class="service-img rounded-top">
-                                <img src="{{ asset('terapia/img/service-2.jpg') }}" class="img-fluid rounded-top w-100" alt="">
-                           </div>
-                            <div class="service-content rounded-bottom bg-light p-4">
-                                <div class="service-content-inner">
-                                    <h5 class="mb-4">Physiotherapy</h5>
-                                    <p class="mb-4">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus, dolor qui ullam</p>
-                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="service-item rounded">
-                           <div class="service-img rounded-top">
-                                <img src="{{ asset('terapia/img/service-3.jpg') }}" class="img-fluid rounded-top w-100" alt="">
-                           </div>
-                            <div class="service-content rounded-bottom bg-light p-4">
-                                <div class="service-content-inner">
-                                    <h5 class="mb-4">Heat & Cold Therapy</h5>
-                                    <p class="mb-4">Dolor, sit amet consectetur adipisicing elit. Soluta inventore cum accusamus, dolor qui ullam</p>
-                                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
 
 
                 </div>
