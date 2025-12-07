@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Potensis\Tables;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -16,7 +17,7 @@ class PotensisTable
             ->columns([
                 TextColumn::make('judul')
                     ->searchable(),
-                TextColumn::make('gambar')
+                ImageColumn::make('gambar')->disk('public')
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()

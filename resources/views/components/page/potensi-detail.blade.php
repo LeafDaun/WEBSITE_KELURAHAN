@@ -16,8 +16,9 @@
 
                 <div class="container shadow rounded-2 p-5 mb-5">
                     
-                    <p>{{ $data->deskripsi_lengkap }}</p>
-                    <img src="{{ asset('storage/'. $data->gambar) }}" class="img-fluid rounded img-zoomin w-100 mb-3" alt="">
+                    {!! $data->deskripsi_lengkap !!}
+                    
+                    <img src="{{ asset('storage/'. $data->gambar) }}" class="img-fluid rounded img-zoomin w-100 mb-3 mt-3" alt="">
     
                     
                 </div>

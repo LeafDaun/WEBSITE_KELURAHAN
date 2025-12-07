@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
+use App\Models\Galeri;
 use App\Models\Layanan;
 use App\Models\Potensi;
 use App\Models\Profil as ModelsProfil;
@@ -43,7 +44,8 @@ class NavbarController extends Controller
 
     function galeri()
     {
-        return view('components.page.galeri');
+        $galeri = Galeri::all();
+        return view('components.page.galeri', compact('galeri'));
     }
 
     function kontak()

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Potensi extends Model
+class Galeri extends Model
 {
     protected $guarded = ['id'];
 }

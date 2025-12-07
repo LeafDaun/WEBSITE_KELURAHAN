@@ -2,12 +2,13 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
+use App\Models\Slide;
 use App\Models\Berita;
+use App\Models\Galeri;
+use App\Models\Profil;
 use App\Models\Layanan;
 use App\Models\Potensi;
-use App\Models\User;
-use App\Models\Profil;
-use App\Models\Slide;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -209,6 +210,27 @@ Apabila potensi tersebut dikelola secara berkelanjutan, sektor pertanian di Giri
             'gambar' => 'potensi/potensi_pertanian.jpg'
         ]);
 
+
+        Galeri::create([
+            'judul' => 'Jembatan Gantung',
+            'deskripsi' => '-',
+            'gambar' => 'galeri/galeri_1.jpg',
+            'tgl_posting' => '2025-12-06'
+        ]);
+
+         Galeri::create([
+            'judul' => 'Pasar Girian',
+            'deskripsi' => '-',
+            'gambar' => 'galeri/galeri_2.jpg',
+            'tgl_posting' => '2025-12-06'
+        ]);
+
+         Galeri::create([
+            'judul' => 'Selat Lembeh',
+            'deskripsi' => '-',
+            'gambar' => 'galeri/galeri_3.jpg',
+            'tgl_posting' => '2025-12-07'
+        ]);
 
     }
 }

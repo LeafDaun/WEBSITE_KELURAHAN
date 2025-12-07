@@ -18,7 +18,7 @@ class PotensiResource extends Resource
 {
     protected static ?string $model = Potensi::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::BookOpen;
 
     public static function form(Schema $schema): Schema
     {

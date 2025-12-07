@@ -11,26 +11,29 @@
                 </div>
 
                  <!-- Galeri Start -->
+                 
                 <div class="container-fluid team py-5">
                     <div class="container py-5">
-                        
                         <div class="row g-4 justify-content-center">
+                            @foreach($galeri as $data)
 
                             <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="team-item rounded">
                                     <div class="team-img rounded-top h-100">
-                                        <img src="{{ asset('terapia/img/team-1.jpg') }}" class="img-fluid rounded-top w-100" alt="">
+                                        <img src="{{ asset('storage/' .$data->gambar) }}" class="img-fluid rounded-top w-100" alt="">
                                     </div>
                                     <div class="team-content text-center border border-primary border-top-0 rounded-bottom p-4">
-                                        <h5>Full Name</h5>
-                                        <p class="mb-0">Message Physio Therapist</p>
+                                        <h5>{{ $data->judul }}</h5>
+                                        <p class="mb-0">{{ \Carbon\Carbon::parse($data->tgl_posting)->format('d-M-Y') }}</p>
                                     </div>
                                 </div>
                             </div>
                             
+                            @endforeach
                         </div>
                     </div>
                 </div>
+                
                 <!-- Galeri End -->
 
        </div>
