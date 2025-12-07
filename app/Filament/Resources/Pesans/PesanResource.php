@@ -20,7 +20,7 @@ class PesanResource extends Resource
 {
     protected static ?string $model = Pesan::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::EnvelopeOpen;
 
     public static function form(Schema $schema): Schema
     {
