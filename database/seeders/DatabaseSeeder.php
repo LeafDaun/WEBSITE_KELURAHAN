@@ -220,7 +220,6 @@ Apabila potensi tersebut dikelola secara berkelanjutan, sektor pertanian di Giri
 
          Galeri::create([
             'judul' => 'Pasar Girian',
-            'deskripsi' => '-',
             'gambar' => 'galeri/galeri_2.jpg',
             'tgl_posting' => '2025-12-06'
         ]);

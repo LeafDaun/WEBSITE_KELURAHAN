@@ -17,7 +17,7 @@ use Filament\Tables\Table;
 class BeritaResource extends Resource
 {
     protected static ?string $model = Berita::class;
-
+    protected static ?int $navigationSort = 2;
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Newspaper;
 
     public static function form(Schema $schema): Schema

@@ -17,7 +17,7 @@ use Filament\Tables\Table;
 class SlideResource extends Resource
 {
     protected static ?string $model = Slide::class;
-
+    protected static ?int $navigationSort = 3;
     protected static string | BackedEnum | null $navigationIcon = Heroicon::ArrowLeftStartOnRectangle;
 
     public static function form(Schema $schema): Schema
