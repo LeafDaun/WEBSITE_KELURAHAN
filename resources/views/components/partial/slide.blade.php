@@ -11,7 +11,7 @@
                             <h1 class="display-5 text-capitalize text-white mb-4">Kelurahan Girian Bawah</h1>
                             <p class="mb-5 fs-5 animated slideInDown">Selamat Datang di Website Resmi Pemerintah Kelurahan Girian Bawah Kecamatan Girian Kota Bitung, 
                             </p>
-                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Hubungi Kami</a>
+                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="{{ asset('/pesan') }}">Hubungi Kami</a>
                         </div>
                     </div>
                    

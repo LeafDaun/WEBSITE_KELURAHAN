@@ -36,22 +36,45 @@ Lebih dari sekadar kata-kata, komitmen ini kami wujudkan melalui respon yang cep
             @endif
 
                             <form action="{{ route('pesan.store') }}" method="POST">
+                                @csrf
                                 <div class="row gy-3 gx-4">
-                                    <div class="col-xl-12">
+
+                                    {{-- <div class="col-xl-12">
                                         <input type="text" class="form-control py-3 border-primary bg-transparent text-black" placeholder="Nama Lengkap">
+                                    </div> --}}
+
+                                    <div class="col-xl-12">
+                                        <input type="text" name="nama" class="form-control py-3 border-primary bg-transparent text-black @error('nama') is-invalid @enderror" placeholder="Nama">
+                                        @error('nama') <div class="text-danger small">{{ $message }}</div> @enderror
                                     </div>
+
                                     <div class="col-xl-6">
-                                        <input type="email" class="form-control py-3 border-primary bg-transparent text-black" placeholder="Email">
+                                        <input type="email" name="email" class="form-control py-3 border-primary bg-transparent text-black @error('email') is-invalid @enderror" placeholder="Email">
+                                        @error('email') <div class="text-danger small">{{ $message }}</div> @enderror
                                     </div>
+
                                     <div class="col-xl-6">
-                                        <input type="phone" class="form-control py-3 border-primary bg-transparent" placeholder="Nomor HP">
+                                        <input type="phone" name="hp" class="form-control py-3 border-primary bg-transparent @error('hp') is-invalid @enderror" placeholder="Nomor HP">
+                                        @error('hp') <div class="text-danger small">{{ $message }}</div> @enderror
                                     </div>
                                     
                                     <div class="col-12">
-                                        <textarea class="form-control border-primary bg-transparent text-black" name="text" id="area-text" cols="30" rows="5" placeholder="Tuliskan Pertanyaan/Pesan anda.."></textarea>
+                                        <textarea class="form-control border-primary bg-transparent text-black @error('pesan') is-invalid @enderror" name="pesan" cols="30" rows="5" placeholder="Tuliskan Pertanyaan/Pesan anda.."></textarea>
+                                        @error('pesan') <div class="text-danger small">{{ $message }}</div> @enderror
                                     </div>
+
+
+                                     {{-- reCAPTCHA --}}
+                                    <div class="mb-3">
+                                        {!! NoCaptcha::renderJs() !!}
+                                        {!! NoCaptcha::display() !!}
+                                        @error('g-recaptcha-response') 
+                                            <div class="text-danger small">{{ $message }}</div> 
+                                        @enderror
+                                    </div>
+
                                     <div class="col-12">
-                                        <button type="button" class="btn btn-primary text-white w-100 py-3 px-5">KIRIM PESAN</button>
+                                        <button type="submit" class="btn btn-primary text-white w-100 py-3 px-5">KIRIM PESAN</button>
                                     </div>
                                 </div>
                             </form>

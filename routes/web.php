@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\NavbarController;
+use App\Http\Controllers\PesanController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -13,9 +14,11 @@ Route::prefix('/informasi')->group(function(){
       Route::get('/potensi', [NavbarController::class, 'potensi'])->name('potensi.index');
       Route::get('/potensi_show/{id}', [NavbarController::class, 'potensi_show'])->name('potensi.show');
       Route::get('/galeri', [NavbarController::class, 'galeri'])->name('galeri.index');
-      Route::get('/kontak', [NavbarController::class, 'kontak'])->name('kontak.index');
       Route::get('/berita/{id}', [NavbarController::class, 'show'])->name('berita.show');
       
 });
+
+Route::get('/pesan', [PesanController::class, 'index']);
+Route::post('/pesan', [PesanController::class, 'store'])->name('pesan.store');
 
 

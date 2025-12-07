@@ -7,8 +7,16 @@ use Illuminate\Http\Request;
 
 class PesanController extends Controller
 {
-   public function store(Request $request)
+
+    public function index()
     {
+        return view('components.page.pesan');
+    }
+
+
+    public function store(Request $request)
+    {
+        // dd($request);
         $request->validate([
             'nama'   => 'required|string|max:100',
             'email'  => 'required|email',

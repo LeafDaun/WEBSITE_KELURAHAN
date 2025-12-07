@@ -49,7 +49,7 @@
                         <a href="{{ asset('informasi/galeri') }}" class="nav-item nav-link">Galeri</a>
                         {{-- <a href="#" class="nav-item nav-link">Kontak</a> --}}
                     </div>
-                    <a href="{{ asset('informasi/kontak') }}" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Hubungi Kami</a>
+                    <a href="{{ asset('/pesan') }}" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Hubungi Kami</a>
                 </div>
             </nav>
 
