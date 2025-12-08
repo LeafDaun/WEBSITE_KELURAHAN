@@ -17,20 +17,21 @@ class LayananForm
                 TextInput::make('judul')
                     ->default(null),
                 Textarea::make('deskripsi')           
-                    ->label('Deskripsi'),
+                    ->label('Deskripsi')
+                    ->required(),
 
                 MarkdownEditor::make('deskripsi_lengkap')           
                     ->label('Daftar Deskripsi Layanan (gunakan tag HTML jika memungkinkan)')
-                    ->columnSpanFull(),  
+                    ->columnSpanFull()->required(),  
                 MarkdownEditor::make('persyaratan')           
                     ->label('Persyaratan (gunakan tag HTML jika memungkinkan)')
-                    ->columnSpanFull(),
+                    ->columnSpanFull()->required(),
                
                 FileUpload::make('gambar')
                             ->disk('public')
                             ->directory('layanan')
                             ->label('Gambar Layanan')
-                            ->nullable(),
+                            ->required(),
             ]);
     }
 }

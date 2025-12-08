@@ -14,15 +14,17 @@ class SlideForm
         return $schema
             ->components([
                 TextInput::make('judul')
-                    ->default(null),
+                    ->default(null)
+                    ->required(),
                 Textarea::make('deskripsi')
                     ->default(null)
+                    ->required()
                     ->columnSpanFull(),
                 FileUpload::make('gambar')
                             ->disk('public')
                             ->directory('slide')
                             ->label('Gambar Slide')
-                            ->nullable(),
+                            ->required(),
             ]);
     }
 }

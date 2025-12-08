@@ -15,7 +15,8 @@ class GaleriForm
         return $schema
             ->components([
                 TextInput::make('judul')
-                    ->default(null),
+                    ->default(null)
+                    ->required(),
                 // Textarea::make('deskripsi')
                 //     ->default(null)
                 //     ->columnSpanFull(),
@@ -23,7 +24,7 @@ class GaleriForm
                             ->disk('public')
                             ->directory('galeri')
                             ->label('Foto')
-                            ->nullable(),
+                            ->required(),
                 DatePicker::make('tgl_posting')
                     ->required(),
             ]);

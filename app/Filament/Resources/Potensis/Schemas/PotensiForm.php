@@ -15,20 +15,21 @@ class PotensiForm
         return $schema
             ->components([
                 TextInput::make('judul')->label('Nama Potensi')
-                    ->default(null),
+                    ->default(null)->required(),
                 Textarea::make('deskripsi')->label('Deskripsi')
-                    ->default(null)
+                    ->default(null)->required()
                     ->columnSpanFull(),
 
                  MarkdownEditor::make('deskripsi_lengkap')           
                     ->label('Konten Narasi (gunakan tag HTML jika memungkinkan)')
+                    ->required()
                     ->columnSpanFull(),
                 
                     FileUpload::make('gambar')
                             ->disk('public')
                             ->directory('potensi')
                             ->label('Foto')
-                            ->nullable(),
+                            ->required(),
             ]);
     }
 }

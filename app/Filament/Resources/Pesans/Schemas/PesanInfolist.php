@@ -17,8 +17,8 @@ class PesanInfolist
                 TextEntry::make('hp'),
                 TextEntry::make('created_at')
                     ->dateTime(),
-                TextEntry::make('updated_at')
-                    ->dateTime(),
+                TextEntry::make('pesan')
+                    ->label('Pesan'),
             ]);
     }
 }

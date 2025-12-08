@@ -18,16 +18,18 @@ class BeritaForm
                 TextInput::make('judul')
                     ->label('Judul Berita')
                     ->columnSpanFull()
-                    ->default(null),
+                    ->default(null)
+                    ->required(),
                 Textarea::make('isi_berita')
                     ->label('Isi Berita')
                     ->default(null)->rows(12)
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->required(),
                 FileUpload::make('gambar')
                             ->disk('public')
                             ->directory('berita')
                             ->label('Foto')
-                            ->nullable(),
+                            ->required(),
                  DatePicker::make('tgl_posting')
                     ->label('Tanggal Posting')
                     ->required(),
