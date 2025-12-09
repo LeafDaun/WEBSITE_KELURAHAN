@@ -19,7 +19,7 @@ use Filament\Tables\Table;
 class PesanResource extends Resource
 {
     protected static ?string $model = Pesan::class;
-
+    protected static ?int $navigationSort = 12;
     protected static string|BackedEnum|null $navigationIcon = Heroicon::EnvelopeOpen;
 
     public static function form(Schema $schema): Schema

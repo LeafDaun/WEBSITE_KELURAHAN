@@ -12,9 +12,9 @@
                 </div>
 
     <div class="row">
-        <div class="col-6">
+        <div class="col-md-6">
 
-            <div class="card">
+            <div class="card mt-3">
                 <h5 class="card-header bg-primary text-white">DAFTAR LAYANAN :</h5>
                 <div class="card-body">
                     {!! $data->deskripsi_lengkap !!}
@@ -23,9 +23,9 @@
 
         </div>
 
-          <div class="col-6">
+          <div class="col-md-6">
 
-            <div class="card">
+            <div class="card mt-3">
                 <h5 class="card-header bg-success text-white">PERSYARATAN :</h5>
                 <div class="card-body">
                     {!! $data->persyaratan !!}
